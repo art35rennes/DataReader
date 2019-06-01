@@ -13,4 +13,10 @@ class Statement extends Model
         'pylon_B',
     ];
 
+    protected $connection = 'mysql';
+
+    static public function show(){
+        
+    }
+
 }

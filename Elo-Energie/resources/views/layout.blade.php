@@ -20,25 +20,34 @@
 <body class="bg-light">
 <header>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">Elo-Energie</a>
+        <a class="navbar-brand" href="#">
+            <img src="{{URL::asset('elo.png')}}" width="40" class="d-inline-block align-top" alt="">
+            Elo-Energie</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav">
-                <li class="nav-item dropdown active">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="pylonsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <i class="fas fa-project-diagram fa-sm mr-1"></i>Lignes et Pylônes
                     </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <div class="dropdown-menu" aria-labelledby="pylonsDropdown">
                         <a class="dropdown-item" href="/lignes">Liste des lignes</a>
                         <a class="dropdown-item" href="/pylons">Liste des pylônes</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="/pylons/add">Ajouter un ou plusieurs pylônes</a>
+                        <a class="dropdown-item" href="/pylons/add">Ajouter un pylônes</a>
                     </div>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/statements"><i class="fas fa-file-alt fa-sm mr-1"></i>Etude de section</a>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="statementsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-file-alt fa-sm mr-1"></i>Etude de section
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="statementsDropdown">
+                        <a class="dropdown-item" href="/statements">Liste des études</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="/statements/add">Ajouter une étude</a>
+                    </div>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/admin"><i class="fas fa-search fa-sm mr-1"></i>Monitoring</a>
@@ -50,7 +59,7 @@
     <!-- Page Layout here -->
 
 <main role='main' class="p-3">
-    <div class="container-fluid w-75 mt-3 bg-white">
+    <div class="container-fluid w-75 mt-3 bg-white p-3">
         @yield('body')
     </div>
 </main>

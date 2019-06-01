@@ -1,4 +1,6 @@
-
+//-------------------------------
+//            Event
+//-------------------------------
 $('#ligneName').change(function () {
    if ($(this).is(':checked')){
        $('#ligne_p_B').val($('#ligne_p_A').val());

@@ -33,4 +33,19 @@ class Pylon extends Model
             ->groupBy('ligne')
             ->get();
     }
+
+    static public function getByLigne(){
+        return DB::table('pylons')
+            ->select('ligne', 'numero')
+            ->orderBy('ligne')
+            ->orderBy('numero')
+            ->get();
+    }
+
+    static public function findIdOf($ligne, $numero){
+        return DB::table('pylons')
+            ->select('id')
+            ->where(['ligne'=>$ligne, 'numero'=>$numero])
+            ->get()[0]->id;
+    }
 }
