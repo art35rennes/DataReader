@@ -88,5 +88,7 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="materialize" level="application" />
+    <orderEntry type="library" name="7e6e3df767" level="application" />
   </component>
 </module>

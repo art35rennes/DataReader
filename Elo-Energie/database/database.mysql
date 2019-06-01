@@ -1,0 +1,6 @@
+'mysql' => [
+    'driver'    => 'mysql',
+    'database'  => 'capisen',
+    'username'  => 'root',
+    'password'  => '',
+],

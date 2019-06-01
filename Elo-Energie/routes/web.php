@@ -14,3 +14,9 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/pylons', 'PylonController@show');
+Route::get('/lignes', 'LigneController@show');
+
+Route::get('/pylons/add', 'PylonController@addView');
+Route::post('/pylons/add', 'PylonController@addDb');
