@@ -1,0 +1,19 @@
+html, body{
+    font-family: 'Nunito', sans-serif;
+}
+
+.table td.fit,
+.table th.fit {
+    white-space: nowrap;
+    width: 1%;
+}
+
+.fa-ban:hover{
+    color: red;
+    cursor: pointer;
+}
+
+.fa-edit:hover{
+    color: #f6993f;
+    cursor: pointer;
+}

@@ -4,82 +4,68 @@
 @section('body')
     <h4>Ajout de nouveau pylônes</h4>
 
-    <form class="mt-3" method="post" action="/pylons/add">
+    <form method="post" action="/pylons/add">
         @csrf
         <div class="row">
             <div class="col-6">
-                <h5>Pylône A</h5>
                 <div class="form-group">
-                    <label for="ligne_p_A">Nom de la ligne haute tension</label>
-                    <input required type="text" class="form-control" id="ligne_p_A" name="ligne_p_A" aria-describedby="ligne_p_A_help" placeholder="Entrer le nom de ligne" list="dataLigne">
-                    <small id="ligne_p_A_help" class="form-text text-muted">Saisissez le nom s'il n'apparait pas dans la liste.</small>
+                    <label for="ligne">Nom de la ligne haute tension</label>
+                    <input type="text" class="form-control" id="ligne" name="ligne" value="{{old('ligne')}}" placeholder="Entrer le nom de ligne" list="dataLigne">
+                    <small id="ligne_help" class="form-text text-muted">Saisissez le nom s'il n'apparait pas dans la liste.</small>
                 </div>
+                @if($errors->has('ligne'))
+                <span class="font-weight-light text-danger font-italic">{{$errors->first('ligne')}}</span>
+                @endif
 
                 <div class="form-group col-5 pl-0">
-                    <label for="ligne_p_A">Numéro de pylône</label>
-                    <input required type="number" class="form-control" id="num_p_A" name="num_p_A">
+                    <label for="ligne">Numéro de pylône</label>
+                    <input type="number" class="form-control" id="numero" name="numero" value="{{old('numero')}}" min="0">
                 </div>
+                @if($errors->has('numero'))
+                    <span class="font-weight-light text-danger font-italic">{{$errors->first('numero')}}</span>
+                @endif
 
                 <div class="row">
                     <div class="form-group col-6">
-                        <label for="ligne_p_A">Longitude</label>
-                        <input required type="number" class="form-control" id="longitude_p_A" name="longitude_p_A" step="0.00000001">
+                        <label for="longitude">Longitude</label>
+                        <input type="number" class="form-control" id="longitude" name="longitude" step="0.00000001" value="{{old('longitude')}}">
+                        @if($errors->has('longitude'))
+                            <span class="font-weight-light text-danger font-italic">{{$errors->first('longitude')}}</span>
+                        @endif
                     </div>
+
                     <div class="form-group col-6">
-                        <label for="ligne_p_A">Latitude</label>
-                        <input required type="number" class="form-control" id="latitude_p_A" name="latitude_p_A" step="0.00000001">
+                        <label for="latitude">Latitude</label>
+                        <input type="number" class="form-control" id="latitude" name="latitude" step="0.00000001" value="{{old('latitude')}}">
+                        @if($errors->has('latitude'))
+                            <span class="font-weight-light text-danger font-italic">{{$errors->first('latitude')}}</span>
+                        @endif
                     </div>
+
                 </div>
             </div>
+            <div class="existingP">
 
-            <div class="col-6">
-                <h5>Pylône B</h5>
-                <div class="form-group">
-                    <label for="ligne_p_B">Nom de la ligne haute tension</label>
-                    <input type="text" class="form-control" id="ligne_p_B" name="ligne_p_B" aria-describedby="ligne_p_B_help" placeholder="Entrer le nom de ligne" list="dataLigne">
-                    <small id="ligne_p_B_help" class="form-text text-muted">Saisissez le nom s'il n'apparait pas dans la liste.</small>
-                </div>
-
-                <div class="form-group col-5 pl-0">
-                    <label for="ligne_p_B">Numéro de pylône</label>
-                    <input type="number" class="form-control" id="num_p_B" name="num_p_B">
-                </div>
-
-                <div class="row">
-                    <div class="form-group col-6">
-                        <label for="ligne_p_B">Longitude</label>
-                        <input type="number" class="form-control" id="longitude_p_B" name="longitude_p_B" step="0.00000001">
-                    </div>
-                    <div class="form-group col-6">
-                        <label for="ligne_p_B">Latitude</label>
-                        <input type="number" class="form-control" id="latitude_p_B" name="latitude_p_B" step="0.00000001">
-                    </div>
-                </div>
             </div>
-
         </div>
 
-        <div class="form-group form-check">
+        <!--div class="form-group form-check">
             <input type="checkbox" class="form-check-input" id="ligneName">
             <label class="form-check-label" for="ligneName">Utiliser la même ligne pour les deux pylônes</label>
-        </div>
+        </div-->
         <button type="submit" class="btn btn-primary">Ajouter</button>
     </form>
 
-    @if(session()->has('message'))
+    @if(isset($success) && $success > 0)
         <div class="alert alert-success">
-            {{ session()->get('success') }} pylône(s) ajouté avec succès !
+            {{ $success }} pylône(s) ajouté avec succès !
         </div>
+    @endif
 
-        @if ($errors->any())
-            <div class="alert alert-danger">
-                <ul>
-                    @foreach ($errors->all() as $error)
-                        <li>{{ $error }}</li>
-                    @endforeach
-                </ul>
-            </div>
-        @endif
+    @if(isset($msg) && $msg != "")
+        <div class="alert alert-info col-6 m-3">
+            {{ $msg }}
+        </div>
     @endif
 
     <datalist id="dataLigne">

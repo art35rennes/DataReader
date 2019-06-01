@@ -17,6 +17,10 @@ Route::get('/', function () {
 
 Route::get('/pylons', 'PylonController@show');
 Route::get('/lignes', 'LigneController@show');
+Route::get('/statements', 'StatementController@show');
 
 Route::get('/pylons/add', 'PylonController@addView');
 Route::post('/pylons/add', 'PylonController@addDb');
+
+Route::get('/statements/add', 'StatementController@addView');
+Route::post('/statements/add', 'StatementController@addDb');

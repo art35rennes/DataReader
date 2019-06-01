@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Pylon;
+use Illuminate\Support\Facades\Input;
 
 class PylonController extends Controller
 {
@@ -19,60 +20,31 @@ class PylonController extends Controller
     }
 
     public function addDb(Request $request){
-//        dd($request->all());
         $n=0;
+        $msg = "";
 
         if ($request->validate([
-            'ligne_p_A' => 'required|max:255',
-            'num_p_A' => 'required',
-            'longitude_p_A' => 'required',
-            'latitude_p_A' => 'required'
+            'ligne' => 'required|max:255|string',
+            'numero' => 'required|integer',
+            'longitude' => 'required',
+            'latitude' => 'required'
         ])) {
-            $pylonA = new Pylon();
-            $pylonA->ligne = $request->ligne_p_A;
-            $pylonA->numero = $request->num_p_A;
-            $pylonA->longitude = $request->longitude_p_A;
-            $pylonA->latitude = $request->latitude_p_A;
+            $pylon = new Pylon();
+            $pylon->ligne = $request->ligne;
+            $pylon->numero = $request->numero;
+            $pylon->longitude = $request->longitude;
+            $pylon->latitude = $request->latitude;
 
             if (Pylon::where(
-                    ['ligne' => $pylonA->ligne,
-                        'numero' => $pylonA->numero]
+                    ['ligne' => $pylon->ligne,
+                        'numero' => $pylon->numero]
                 )->first() != null) {
-                //dd('exist');
+                $msg = "Pylône déjà référencé !";
             } else {
-                //dd('not exist');
-                $pylonA->save();
+                $pylon->save();
                 $n++;
             }
-
-            if ($request->validate([
-                'ligne_p_B' => 'required|max:255',
-                'num_p_B' => 'required',
-                'longitude_p_B' => 'required',
-                'latitude_p_B' => 'required'
-            ])) {
-                $pylonB = new Pylon();
-                $pylonB->ligne = $request->ligne_p_B;
-                $pylonB->numero = $request->num_p_B;
-                $pylonB->longitude = $request->longitude_p_B;
-                $pylonB->latitude = $request->latitude_p_B;
-
-                if (Pylon::where(
-                        ['ligne' => $pylonB->ligne,
-                            'numero' => $pylonB->numero]
-                    )->first() != null) {
-//                dd('exist');
-                } else {
-//                dd('not exist b');
-                    $pylonB->save();
-                    $n++;
-                }
-            }
-            else{
-                dd('nop');
-            }
-
-            return view('pylon.add', ['lignes' => Pylon::getLignes()])->withInput($request->input())->with('success', $n);
+            return view('pylon.add', ['lignes' => Pylon::getLignes(), 'success' => $n, 'msg' => $msg])->withInput($request->input());
         }
     }
 }
