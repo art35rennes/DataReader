@@ -3,11 +3,16 @@ html, body{
 }
 
 .table td.fit,
-.table th.fit {
+.table th.fit,
+.table td.data-fit,
+.table th.data-fit {
     white-space: nowrap;
     width: 1%;
 }
-
+.fa-chart-area:hover{
+    color: #1d68a7;
+    cursor: pointer;
+}
 .fa-ban:hover{
     color: red;
     cursor: pointer;

@@ -2,16 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7f903130-74cd-4521-b2b0-318f23e45b33" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/StatementController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/statement.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/statement/add.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/statement/show.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/DataController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/css/data.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/js/data.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/data/add.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/data/show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Elo-Energie.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Elo-Energie.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Pylon.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Pylon.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Data.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Data.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/StatementController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/StatementController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Statement.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Statement.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/general.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/general.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/pylon.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/pylon.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/general.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/general.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/statement.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/statement.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layout.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layout.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/ligne/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/ligne/show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pylon/add.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pylon/add.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pylon/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pylon/show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/statement/add.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/statement/add.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/statement/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/statement/show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -19,22 +29,16 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
+    <execution>
+      <executable />
+    </execution>
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5097381">
+    <splitter split-orientation="horizontal" split-proportion="0.4123573">
       <split-first>
-        <leaf>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/routes/web.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="153">
-                  <caret line="18" column="19" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="19" />
-                </state>
-              </provider>
-            </entry>
-          </file>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/Http/Controllers/LigneController.php">
               <provider selected="true" editor-type-id="text-editor">
@@ -45,10 +49,49 @@
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/app/Http/Controllers/PylonController.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="255">
+                  <caret line="21" column="44" selection-start-line="21" selection-start-column="44" selection-end-line="21" selection-end-column="44" />
+                  <folding>
+                    <element signature="e#273#412#0#PHP" />
+                    <element signature="e#418#1396#0#PHP" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/app/Http/Controllers/StatementController.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="459">
+                  <caret line="27" column="44" selection-start-line="27" selection-start-column="44" selection-end-line="27" selection-end-column="44" />
+                  <folding>
+                    <element signature="e#40#53#0#PHP" expanded="true" />
+                    <element signature="e#542#11708#0#PHP" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/app/Http/Controllers/DataController.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="306">
+                  <caret line="47" column="20" selection-start-line="47" selection-start-column="20" selection-end-line="47" selection-end-column="20" />
+                  <folding>
+                    <element signature="e#122#206#0#PHP" />
+                    <element signature="e#212#1032#0#PHP" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/Pylon.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="476">
-                  <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
+                <state relative-caret-position="-153">
+                  <caret line="4" selection-start-line="4" selection-end-line="5" selection-end-column="39" />
                   <folding>
                     <element signature="e#23#57#0#PHP" expanded="true" />
                   </folding>
@@ -57,19 +100,22 @@
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/resources/views/statement/show.blade.php">
+            <entry file="file://$PROJECT_DIR$/app/Statement.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="544">
-                  <caret line="32" selection-start-line="32" selection-end-line="32" />
+                <state relative-caret-position="323">
+                  <caret line="20" column="5" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
+                  <folding>
+                    <element signature="e#23#62#0#PHP" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/app/Statement.php">
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/app/Data.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="306">
-                  <caret line="18" column="8" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="8" />
+                <state relative-caret-position="204">
+                  <caret line="12" column="10" selection-start-line="12" selection-start-column="10" selection-end-line="12" selection-end-column="10" />
                 </state>
               </provider>
             </entry>
@@ -77,50 +123,68 @@
         </leaf>
       </split-first>
       <split-second>
-        <splitter split-orientation="vertical" split-proportion="0.67785233">
+        <splitter split-orientation="vertical" split-proportion="0.6751678">
           <split-first>
-            <leaf>
+            <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
               <file pinned="false" current-in-tab="false">
-                <entry file="file://$PROJECT_DIR$/app/Http/Controllers/PylonController.php">
+                <entry file="file://$PROJECT_DIR$/resources/views/layout.blade.php">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="711">
-                      <caret line="46" column="132" selection-start-line="46" selection-start-column="102" selection-end-line="46" selection-end-column="132" />
+                    <state relative-caret-position="323">
+                      <caret line="61" column="16" lean-forward="true" selection-start-line="61" selection-start-column="16" selection-end-line="61" selection-end-column="31" />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file pinned="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/resources/views/ligne/show.blade.php">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state relative-caret-position="323">
+                      <caret line="19" column="42" selection-start-line="19" selection-start-column="42" selection-end-line="19" selection-end-column="42" />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file pinned="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/resources/views/statement/show.blade.php">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state relative-caret-position="459">
+                      <caret line="27" column="82" selection-start-line="27" selection-start-column="82" selection-end-line="27" selection-end-column="82" />
                     </state>
                   </provider>
                 </entry>
               </file>
               <file pinned="false" current-in-tab="true">
-                <entry file="file://$PROJECT_DIR$/app/Http/Controllers/StatementController.php">
+                <entry file="file://$PROJECT_DIR$/resources/views/data/show.blade.php">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="323">
-                      <caret line="26" column="44" selection-start-line="26" selection-start-column="44" selection-end-line="26" selection-end-column="44" />
+                    <state relative-caret-position="136">
+                      <caret line="41" column="31" selection-start-line="41" selection-start-column="31" selection-end-line="41" selection-end-column="31" />
                       <folding>
-                        <element signature="e#40#58#0#PHP" expanded="true" />
-                        <element signature="e#340#494#0#PHP" />
-                        <element signature="e#564#8544#0#PHP" />
-                        <element signature="e#1675#1805#0#PHP" />
-                        <element signature="e#1671#1964#0#PHP" />
-                        <element signature="e#1890#1964#0#PHP" />
-                        <element signature="e#2388#2530#0#PHP" />
-                        <element signature="e#2426#2508#1#PHP" />
-                        <element signature="e#2682#2784#0#PHP" />
-                        <element signature="e#4922#5064#0#PHP" />
-                        <element signature="e#4960#5042#1#PHP" />
-                        <element signature="e#5216#5318#0#PHP" />
-                        <element signature="e#6309#6395#1#PHP" />
+                        <element signature="e#41#66#0#HTML" />
+                        <element signature="e#157#309#0#HTML" />
+                        <element signature="e#207#240#0#HTML" />
+                        <element signature="e#216#249#0#HTML" />
+                        <element signature="e#924#942#0#HTML" expanded="true" />
+                        <element signature="e#1394#2272#0#HTML" />
+                        <element signature="e#1591#1917#0#HTML" />
+                        <element signature="e#1623#1800#0#HTML" />
+                        <element signature="e#1745#1764#0#HTML" expanded="true" />
+                        <element signature="e#3441#4443#0#HTML" />
+                        <element signature="e#3985#3992#1#HTML" expanded="true" />
                       </folding>
                     </state>
                   </provider>
                 </entry>
               </file>
               <file pinned="false" current-in-tab="false">
-                <entry file="file://$PROJECT_DIR$/resources/views/layout.blade.php">
+                <entry file="file://$PROJECT_DIR$/resources/views/data/add.blade.php">
+                  <provider selected="true" editor-type-id="text-editor" />
+                </entry>
+              </file>
+              <file pinned="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/resources/views/statement/add.blade.php">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="101">
-                      <caret line="59" lean-forward="true" selection-start-line="59" selection-end-line="59" />
-                      <folding>
-                        <element signature="n#nav#0;n#header#0;n#body#0;n#html#0;n#!!top" />
-                      </folding>
+                    <state relative-caret-position="595">
+                      <caret line="35" column="22" selection-start-line="33" selection-start-column="16" selection-end-line="35" selection-end-column="22" />
                     </state>
                   </provider>
                 </entry>
@@ -128,8 +192,8 @@
               <file pinned="false" current-in-tab="false">
                 <entry file="file://$PROJECT_DIR$/resources/views/pylon/add.blade.php">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="-773">
-                      <caret line="23" column="16" lean-forward="true" selection-start-line="23" selection-start-column="16" selection-end-line="25" selection-end-column="22" />
+                    <state relative-caret-position="68">
+                      <caret line="4" column="43" selection-start-line="4" selection-start-column="43" selection-end-line="4" selection-end-column="43" />
                     </state>
                   </provider>
                 </entry>
@@ -137,8 +201,8 @@
               <file pinned="false" current-in-tab="false">
                 <entry file="file://$PROJECT_DIR$/resources/views/pylon/show.blade.php">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="408">
-                      <caret line="24" column="21" selection-start-line="24" selection-start-column="21" selection-end-line="24" selection-end-column="21" />
+                    <state relative-caret-position="391">
+                      <caret line="23" column="42" selection-start-line="23" selection-start-column="42" selection-end-line="23" selection-end-column="42" />
                     </state>
                   </provider>
                 </entry>
@@ -146,12 +210,30 @@
             </leaf>
           </split-first>
           <split-second>
-            <leaf>
+            <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
               <file pinned="false" current-in-tab="false">
                 <entry file="file://$PROJECT_DIR$/public/css/general.css">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="51">
-                      <caret line="3" selection-start-line="3" selection-end-line="3" />
+                    <state relative-caret-position="119">
+                      <caret line="7" column="15" selection-start-line="7" selection-start-column="15" selection-end-line="7" selection-end-column="15" />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file pinned="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/public/css/data.css">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state>
+                      <folding>
+                        <element signature="e#251#496#0" />
+                        <element signature="e#554#597#0" />
+                        <element signature="e#649#681#0" />
+                        <element signature="e#722#987#0" />
+                        <element signature="e#1082#1352#0" />
+                        <element signature="e#1389#1406#0" />
+                        <element signature="e#1453#1496#0" />
+                        <element signature="e#1512#1580#0" />
+                      </folding>
                     </state>
                   </provider>
                 </entry>
@@ -159,23 +241,26 @@
               <file pinned="false" current-in-tab="false">
                 <entry file="file://$PROJECT_DIR$/public/js/general.js">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="119">
-                      <caret line="45" column="33" lean-forward="true" selection-start-line="45" selection-start-column="33" selection-end-line="45" selection-end-column="33" />
+                    <state relative-caret-position="731">
+                      <caret line="45" column="33" selection-start-line="45" selection-start-column="33" selection-end-line="45" selection-end-column="33" />
                       <folding>
                         <element signature="n#!!doc" expanded="true" />
-                        <element signature="e#279#1951#0" />
                       </folding>
                     </state>
                   </provider>
                 </entry>
               </file>
-              <file pinned="false" current-in-tab="true">
+              <file pinned="false" current-in-tab="false">
                 <entry file="file://$PROJECT_DIR$/public/js/statement.js">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="85">
-                      <caret line="17" column="32" lean-forward="true" selection-start-line="17" selection-start-column="32" selection-end-line="17" selection-end-column="32" />
+                    <state relative-caret-position="204">
+                      <caret line="24" selection-start-line="24" selection-end-line="26" selection-end-column="33" />
                       <folding>
                         <element signature="n#!!doc" expanded="true" />
+                        <element signature="e#151#187#0" />
+                        <element signature="e#191#272#0" />
+                        <element signature="e#332#368#0" />
+                        <element signature="e#372#453#0" />
                       </folding>
                     </state>
                   </provider>
@@ -184,10 +269,43 @@
               <file pinned="false" current-in-tab="false">
                 <entry file="file://$PROJECT_DIR$/public/js/pylon.js">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="22">
+                    <state relative-caret-position="204">
                       <caret line="12" selection-start-line="12" selection-end-line="16" selection-end-column="3" />
                       <folding>
                         <element signature="n#!!doc" expanded="true" />
+                      </folding>
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file pinned="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/routes/web.php">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state relative-caret-position="340">
+                      <caret line="29" column="28" selection-start-line="29" selection-start-column="18" selection-end-line="29" selection-end-column="28" />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file pinned="false" current-in-tab="true">
+                <entry file="file://$PROJECT_DIR$/public/js/data.js">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state relative-caret-position="126">
+                      <caret line="183" column="67" selection-start-line="183" selection-start-column="67" selection-end-line="183" selection-end-column="67" />
+                      <folding>
+                        <element signature="n#!!doc" expanded="true" />
+                        <element signature="n#!!block;n#getGraphStat#0" />
+                        <element signature="n#!!block;n#time#0" />
+                        <element signature="n#!!block;n#makeplot#0" />
+                        <element signature="n#!!block;n#processData#0" />
+                        <element signature="n#!!block;n#makePlotly#0" />
+                        <element signature="n#!!block;n#xTranslation#0" />
+                        <element signature="n#!!block;n#yTranslation#0" />
+                        <element signature="n#!!block;n#yZoom#0" />
+                        <element signature="e#1836#2961#0" />
+                        <element signature="e#3000#3146#0" />
+                        <element signature="e#3187#3195#0" />
+                        <element signature="e#4976#4984#0" />
                       </folding>
                     </state>
                   </provider>
@@ -202,8 +320,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="CSS File" />
         <option value="JavaScript File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -216,6 +334,27 @@
       <find>num</find>
       <find>$statement-&gt;save();</find>
       <find>dataLigne</find>
+      <find>&quot;data&quot; =&gt; 'required'</find>
+      <find>&quot;data&quot; =&gt; 'required|mimes:csv,txt',</find>
+      <find>$data-&gt;</find>
+      <find>DATA</find>
+      <find>plot</find>
+      <find>w-50</find>
+      <find>col-4 m-1</find>
+      <find>col-md-6 col-sm-12</find>
+      <find>&amp;nbsp;</find>
+      <find>d-block</find>
+      <find>$id</find>
+      <find>btn btn-primary m-1</find>
+      <find>btn btn-primary m-1 y-axis</find>
+      <find>id=&quot;lmaRange&quot;</find>
+      <find>id=&quot;ldRange&quot;</find>
+      <find>.replace('Range', 'Graph')</find>
+      <find>Plotly.relayout($input.parent().attr('id'), update);</find>
+      <find>document.getElementById($input.parent().attr('id'))</find>
+      <find>console.log($input.val())</find>
+      <find>fa-file-export</find>
+      <find>&lt;i class=&quot;fas fa-file-export fa-sm m-1&quot;&gt;&lt;/i&gt;</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -230,7 +369,6 @@
         <option value="$PROJECT_DIR$/database/migrations/2019_05_31_172430_create_pylon_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2019_05_31_172445_create_statement_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2019_05_31_172521_create_data_table.php" />
-        <option value="$PROJECT_DIR$/app/Data.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Pylon.php" />
         <option value="$PROJECT_DIR$/.env" />
         <option value="$PROJECT_DIR$/database/database.mysql" />
@@ -243,21 +381,27 @@
         <option value="$PROJECT_DIR$/resources/lang/fr/pagination.php" />
         <option value="$PROJECT_DIR$/resources/lang/fr/passwords.php" />
         <option value="$PROJECT_DIR$/resources/lang/fr/validation.php" />
-        <option value="$PROJECT_DIR$/resources/views/pylon/add.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/PylonController.php" />
-        <option value="$PROJECT_DIR$/resources/views/ligne/show.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/pylon/show.blade.php" />
-        <option value="$PROJECT_DIR$/public/css/general.css" />
-        <option value="$PROJECT_DIR$/routes/web.php" />
-        <option value="$PROJECT_DIR$/resources/views/layout.blade.php" />
         <option value="$PROJECT_DIR$/public/js/general.js" />
         <option value="$PROJECT_DIR$/public/js/pylon.js" />
-        <option value="$PROJECT_DIR$/resources/views/statement/show.blade.php" />
-        <option value="$PROJECT_DIR$/public/js/statement.js" />
         <option value="$PROJECT_DIR$/app/Pylon.php" />
+        <option value="$PROJECT_DIR$/resources/views/pylon/add.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/data/add.blade.php" />
+        <option value="$PROJECT_DIR$/app/Data.php" />
         <option value="$PROJECT_DIR$/resources/views/statement/add.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/StatementController.php" />
+        <option value="$PROJECT_DIR$/resources/views/ligne/show.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/pylon/show.blade.php" />
         <option value="$PROJECT_DIR$/app/Statement.php" />
+        <option value="$PROJECT_DIR$/public/css/general.css" />
+        <option value="$PROJECT_DIR$/public/js/statement.js" />
+        <option value="$PROJECT_DIR$/resources/views/statement/show.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/StatementController.php" />
+        <option value="$PROJECT_DIR$/routes/web.php" />
+        <option value="$PROJECT_DIR$/resources/views/layout.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/DataController.php" />
+        <option value="$PROJECT_DIR$/public/css/data.css" />
+        <option value="$PROJECT_DIR$/resources/views/data/show.blade.php" />
+        <option value="$PROJECT_DIR$/public/js/data.js" />
       </list>
     </option>
   </component>
@@ -395,6 +539,12 @@
               <item name="Elo-Energie" type="b2602c69:ProjectViewProjectNode" />
               <item name="Elo-Energie" type="462c0819:PsiDirectoryNode" />
               <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Elo-Energie" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Elo-Energie" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
               <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -413,14 +563,7 @@
               <item name="Elo-Energie" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="pylon" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Elo-Energie" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Elo-Energie" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="statement" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -431,21 +574,21 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Http/Controllers" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.completion" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\Users\Arthur\Documents\GitHub\Elo\Elo-Energie\public\js" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\Users\Arthur\Documents\GitHub\Elo\Elo-Energie\resources\views" />
       <recent name="D:\Users\Arthur\Documents\GitHub\Elo\Elo-Energie\app\Http\Controllers" />
+      <recent name="D:\Users\Arthur\Documents\GitHub\Elo\Elo-Energie\resources\views" />
       <recent name="D:\Users\Arthur\Documents\GitHub\Elo\Elo-Energie\resources\lang" />
       <recent name="D:\Users\Arthur\Documents\GitHub\Elo\Elo-Energie\database\migrations" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Users\Arthur\Documents\GitHub\Elo\Elo-Energie\public\js" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -477,11 +620,14 @@
       <option name="presentableId" value="Default" />
       <updated>1559317697200</updated>
       <workItem from="1559317698297" duration="45239000" />
+      <workItem from="1559462938093" duration="34640000" />
+      <workItem from="1559553398514" duration="1151000" />
+      <workItem from="1559637940713" duration="27830000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="45239000" />
+    <option name="totallyTimeSpent" value="108860000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -499,7 +645,7 @@
       <window_info id="Favorites" order="0" side_tool="true" />
       <window_info content_ui="combo" id="Project" order="1" weight="0.20013432" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="0" weight="0.4067114" />
+      <window_info anchor="bottom" id="Terminal" order="0" weight="0.9597315" />
       <window_info anchor="bottom" id="Database Changes" order="1" />
       <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="3" />
@@ -559,30 +705,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/Statement_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="18" column="31" selection-start-line="18" selection-start-column="31" selection-end-line="18" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/Data_table.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/Pylon_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="20" column="45" selection-start-line="20" selection-start-column="45" selection-end-line="20" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="18" column="46" lean-forward="true" selection-start-line="18" selection-start-column="46" selection-end-line="18" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/Statement_table.php" />
+    <entry file="file://$PROJECT_DIR$/database/migrations/Data_table.php" />
+    <entry file="file://$PROJECT_DIR$/database/migrations/Pylon_table.php" />
+    <entry file="file://$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" />
     <entry file="file://$PROJECT_DIR$/database/migrations/2019_05_31_172430_create_pylon_table.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
@@ -601,13 +727,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
           <caret line="23" column="11" lean-forward="true" selection-start-line="23" selection-start-column="11" selection-end-line="23" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Data.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="20" selection-start-line="13" selection-start-column="20" selection-end-line="13" selection-end-column="20" />
         </state>
       </provider>
     </entry>
@@ -696,101 +815,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/ligne/show.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="16" lean-forward="true" selection-start-line="17" selection-start-column="16" selection-end-line="20" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/general.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/welcome.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="9" column="93" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="93" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/layout.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="101">
-          <caret line="59" lean-forward="true" selection-start-line="59" selection-end-line="59" />
-          <folding>
-            <element signature="n#nav#0;n#header#0;n#body#0;n#html#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/pylon/add.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-773">
-          <caret line="23" column="16" lean-forward="true" selection-start-line="23" selection-start-column="16" selection-end-line="25" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/general.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="45" column="33" lean-forward="true" selection-start-line="45" selection-start-column="33" selection-end-line="45" selection-end-column="33" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="e#279#1951#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/pylon.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="12" selection-start-line="12" selection-end-line="16" selection-end-column="3" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/statement.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="17" column="32" lean-forward="true" selection-start-line="17" selection-start-column="32" selection-end-line="17" selection-end-column="32" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/statement/add.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="392">
-          <caret line="36" column="45" selection-start-line="36" selection-start-column="45" selection-end-line="36" selection-end-column="45" />
-          <folding>
-            <element signature="e#192#437#0#HTML" />
-            <element signature="e#0#8076#0#Blade" />
-            <element signature="e#0#8255#0#Blade" />
-            <element signature="e#0#8677#0#Blade" />
-            <element signature="e#224#6528#0#HTML" />
-            <element signature="e#0#1566#0#Blade" />
-            <element signature="e#1036#1095#0#HTML" />
-            <element signature="e#2127#3158#0#HTML" />
-            <element signature="e#3710#3993#0#HTML" />
-            <element signature="e#0#7101#0#Blade" />
-            <element signature="e#4190#6509#0#HTML" />
-            <element signature="e#3030#3170#0#HTML" />
-            <element signature="e#7165#7305#0#HTML" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/web.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="18" column="19" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="19" />
         </state>
       </provider>
     </entry>
@@ -801,63 +829,214 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/Statement.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="20" column="5" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
+          <folding>
+            <element signature="e#23#62#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/ligne/show.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="42" selection-start-line="19" selection-start-column="42" selection-end-line="19" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/statement/show.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="27" column="82" selection-start-line="27" selection-start-column="82" selection-end-line="27" selection-end-column="82" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/data/add.blade.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/statement/add.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="35" column="22" selection-start-line="33" selection-start-column="16" selection-end-line="35" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/pylon/add.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="43" selection-start-line="4" selection-start-column="43" selection-end-line="4" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/pylon/show.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" column="42" selection-start-line="23" selection-start-column="42" selection-end-line="23" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/general.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="15" selection-start-line="7" selection-start-column="15" selection-end-line="7" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/general.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="731">
+          <caret line="45" column="33" selection-start-line="45" selection-start-column="33" selection-end-line="45" selection-end-column="33" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/statement.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="24" selection-start-line="24" selection-end-line="26" selection-end-column="33" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="e#151#187#0" />
+            <element signature="e#191#272#0" />
+            <element signature="e#332#368#0" />
+            <element signature="e#372#453#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Data.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="10" selection-start-line="12" selection-start-column="10" selection-end-line="12" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/web.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="29" column="28" selection-start-line="29" selection-start-column="18" selection-end-line="29" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/StatementController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="27" column="44" selection-start-line="27" selection-start-column="44" selection-end-line="27" selection-end-column="44" />
+          <folding>
+            <element signature="e#40#53#0#PHP" expanded="true" />
+            <element signature="e#542#11708#0#PHP" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/PylonController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="21" column="44" selection-start-line="21" selection-start-column="44" selection-end-line="21" selection-end-column="44" />
+          <folding>
+            <element signature="e#273#412#0#PHP" />
+            <element signature="e#418#1396#0#PHP" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/Pylon.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
+        <state relative-caret-position="-153">
+          <caret line="4" selection-start-line="4" selection-end-line="5" selection-end-column="39" />
           <folding>
             <element signature="e#23#57#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/pylon/show.blade.php">
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/DataController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" column="21" selection-start-line="24" selection-start-column="21" selection-end-line="24" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/PylonController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="711">
-          <caret line="46" column="132" selection-start-line="46" selection-start-column="102" selection-end-line="46" selection-end-column="132" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/StatementController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="26" column="44" selection-start-line="26" selection-start-column="44" selection-end-line="26" selection-end-column="44" />
+        <state relative-caret-position="306">
+          <caret line="47" column="20" selection-start-line="47" selection-start-column="20" selection-end-line="47" selection-end-column="20" />
           <folding>
-            <element signature="e#40#58#0#PHP" expanded="true" />
-            <element signature="e#340#494#0#PHP" />
-            <element signature="e#564#8544#0#PHP" />
-            <element signature="e#1675#1805#0#PHP" />
-            <element signature="e#1671#1964#0#PHP" />
-            <element signature="e#1890#1964#0#PHP" />
-            <element signature="e#2388#2530#0#PHP" />
-            <element signature="e#2426#2508#1#PHP" />
-            <element signature="e#2682#2784#0#PHP" />
-            <element signature="e#4922#5064#0#PHP" />
-            <element signature="e#4960#5042#1#PHP" />
-            <element signature="e#5216#5318#0#PHP" />
-            <element signature="e#6309#6395#1#PHP" />
+            <element signature="e#122#206#0#PHP" />
+            <element signature="e#212#1032#0#PHP" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/statement/show.blade.php">
+    <entry file="file://$PROJECT_DIR$/public/js/pylon.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="32" selection-start-line="32" selection-end-line="32" />
+        <state relative-caret-position="204">
+          <caret line="12" selection-start-line="12" selection-end-line="16" selection-end-column="3" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Statement.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/layout.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="8" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="8" />
+        <state relative-caret-position="323">
+          <caret line="61" column="16" lean-forward="true" selection-start-line="61" selection-start-column="16" selection-end-line="61" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/data.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#251#496#0" />
+            <element signature="e#554#597#0" />
+            <element signature="e#649#681#0" />
+            <element signature="e#722#987#0" />
+            <element signature="e#1082#1352#0" />
+            <element signature="e#1389#1406#0" />
+            <element signature="e#1453#1496#0" />
+            <element signature="e#1512#1580#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/data/show.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="41" column="31" selection-start-line="41" selection-start-column="31" selection-end-line="41" selection-end-column="31" />
+          <folding>
+            <element signature="e#41#66#0#HTML" />
+            <element signature="e#157#309#0#HTML" />
+            <element signature="e#207#240#0#HTML" />
+            <element signature="e#216#249#0#HTML" />
+            <element signature="e#924#942#0#HTML" expanded="true" />
+            <element signature="e#1394#2272#0#HTML" />
+            <element signature="e#1591#1917#0#HTML" />
+            <element signature="e#1623#1800#0#HTML" />
+            <element signature="e#1745#1764#0#HTML" expanded="true" />
+            <element signature="e#3441#4443#0#HTML" />
+            <element signature="e#3985#3992#1#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/data.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="183" column="67" selection-start-line="183" selection-start-column="67" selection-end-line="183" selection-end-column="67" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="n#!!block;n#getGraphStat#0" />
+            <element signature="n#!!block;n#time#0" />
+            <element signature="n#!!block;n#makeplot#0" />
+            <element signature="n#!!block;n#processData#0" />
+            <element signature="n#!!block;n#makePlotly#0" />
+            <element signature="n#!!block;n#xTranslation#0" />
+            <element signature="n#!!block;n#yTranslation#0" />
+            <element signature="n#!!block;n#yZoom#0" />
+            <element signature="e#1836#2961#0" />
+            <element signature="e#3000#3146#0" />
+            <element signature="e#3187#3195#0" />
+            <element signature="e#4976#4984#0" />
+          </folding>
         </state>
       </provider>
     </entry>

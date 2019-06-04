@@ -2,9 +2,9 @@
 
 
 @section('body')
-    <h4>Ajout d'un relevé</h4>
+    <h4 class="mb-3 mt-1 font-weight-light">Ajout d'une étude de section</h4>
 
-    <form method="post" action="/statements/add">
+    <form method="post" action="/statements/add" enctype="multipart/form-data" >
         @csrf
         <div class="row">
             <div class="col-6">
@@ -31,6 +31,9 @@
                 </div>
 
                 <button type="submit" class="btn btn-primary mt-3 mb-3">Ajouter</button>
+                <div class="spinner-grow text-secondary" role="status">
+                    <span class="sr-only">Loading...</span>
+                </div>
 
                 @if(isset($success) && $success > 0)
                     <div class="alert alert-success">

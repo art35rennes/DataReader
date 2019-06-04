@@ -2,7 +2,7 @@
 
 
 @section('body')
-    <h4>Ajout de nouveau pylônes</h4>
+    <h4 class="mb-3 mt-1 font-weight-light">Ajout de nouveau pylônes</h4>
 
     <form method="post" action="/pylons/add">
         @csrf

@@ -2,6 +2,8 @@
 
 
 @section('body')
+    <h4 class="mb-3 mt-1 font-weight-light">Liste des pylônes</h4>
+
     <table class="table table-bordered table-striped table-responsive datatable">
         <thead>
         <tr>
@@ -19,8 +21,8 @@
                 <td>{{$pylon->numero}}</td>
                 <td>{{$pylon->longitude}}°</td>
                 <td>{{$pylon->latitude}}°</td>
-                <td class="fit">
-                    <i class="far fa-edit mr-1"></i>
+                <td class="fit text-center">
+                    <i class="fas fa-edit mr-1"></i>
                     <i class="fas fa-ban"></i>
                 </td>
             </tr>

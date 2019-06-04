@@ -2,17 +2,18 @@
 
 namespace App\Http\Controllers;
 
+use App\Data;
 use App\Statement;
-use Illuminate\Http\Request;
 use App\Pylon;
-use Illuminate\Support\Facades\Input;
+use Illuminate\Http\Request;
+
 
 class StatementController extends Controller
 {
     public function show()
     {
 //        dd(Statement::all());
-        return view('statement.show', ['statements' => Statement::all()]);
+        return view('statement.show', ['statements' => Statement::show()]);
     }
 
     public function addView()
@@ -32,7 +33,7 @@ class StatementController extends Controller
             if ($request->validate([
                 "nom" => 'required|string|max:255',
                 "date" => 'required|date',
-                //"data" => 'required', //TODO implemente file system for data graph
+                "data" => 'nullable|mimes:csv,txt',
                 "newPylonA" => 'required',
                 "ligneA" => 'required|string|max:255',
                 "numeroA" => 'required|integer',
@@ -90,7 +91,7 @@ class StatementController extends Controller
                 if ($request->validate([
                     "nom" => 'required|string|max:255',
                     "date" => 'required|date',
-                    //"data" => 'required', //TODO implemente file system for data graph
+                    "data" => 'nullable|mimes:csv,txt',
                     "pylonA" => 'required',
                     "newPylonB" => 'required',
                     "ligneB" => 'required|string|max:255',
@@ -132,7 +133,7 @@ class StatementController extends Controller
                     if ($request->validate([
                         "nom" => 'required|string|max:255',
                         "date" => 'required|date',
-                        //"data" => 'required', //TODO implemente file system for data graph
+                        "data" => 'nullable|mimes:csv,txt',
                         "pylonB" => 'required',
                         "newPylonA" => 'required',
                         "ligneA" => 'required|string|max:255',
@@ -173,7 +174,7 @@ class StatementController extends Controller
                         if ($request->validate([
                             "nom" => 'required|string|max:255',
                             "date" => 'required|date',
-                            //"data" => 'required', //TODO implemente file system for data graph
+                            "data" => 'nullable|mimes:csv,txt',
                             "pylonA" => 'required',
                             "pylonB" => 'required',
                         ])) {
@@ -201,10 +202,73 @@ class StatementController extends Controller
             $success = 0;
         }
         else{
+            $n = 0;
             $statement->save();
+            if ($request->hasFile('data') && $request->file('data')->isValid()){
+                $indexX = 1;
+                $indexLD = 2;
+                $indexLMA = 3;
+
+                $data = new Data();
+                $dataToInsert = [];
+
+                $file = $request->data;
+                $fn = fopen($file,"r");
+                while(! feof($fn))  {
+                    $line = fgets($fn);
+                    if (is_numeric($line[0])){
+                        $split = preg_split('/[,]/', $line);
+//                        echo 'X: '.$split[$indexX].
+//                            ' / LD: '.$split[$indexLD].
+//                            ' / LMA: '.$split[$indexLMA].
+//                            ' / line: '.$line.'<br>';
+
+                        if ($split[$indexX] != '' &&
+                            $split[$indexLD] != '' &&
+                            $split[$indexLMA] != '') {
+                            array_push($dataToInsert, [
+                                'x' => $split[$indexX],
+                                'ld' => $split[$indexLD],
+                                'lma' => $split[$indexLMA],
+                                'statement' => $statement->id
+                            ]);
+                            $n++;
+                        }else{
+                            echo [
+                                'x' => $split[$indexX],
+                                'ld' => $split[$indexLD],
+                                'lma' => $split[$indexLMA],
+                                'statement' => $statement->id
+                            ].'<br>';
+                        }
+                    }
+//                    if (count($dataToInsert) == 500 ){
+//                        $data->save($dataToInsert);
+//                        unset($dataToInsert);
+//                        $dataToInsert = [];
+//                    }
+
+                }
+                if (count($dataToInsert) > 0 ){
+//                    echo '<h3>N: '.$n.'</h3><br>';
+//                    foreach ($dataToInsert as $tab){
+//                        echo 'x: '.$tab['x'].'<br>';
+//                        echo $tab['x']=="" ? 'problème' : null;
+//                    }
+//                    dd('stop');
+                    $collectionToInsert = collect($dataToInsert);
+                    $chunkToInsert = $collectionToInsert->chunk(1000);
+                    foreach ($chunkToInsert as $chunk) {
+                        Data::insert($chunk->toArray());
+                    }
+                }
+                fclose($fn);
+            }
             $success = 1;
-            $msg = "";
+            $msg = $n." données ajouté !";
         }
+
+//        dd('no return is possible '.$msg);
         return view('statement.add',
             ['pylones' => Pylon::getByLigne(),
             'lignes'=> Pylon::getLignes(),

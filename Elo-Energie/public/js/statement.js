@@ -18,6 +18,8 @@ if($('#formNewPylonB').find('span.text-danger').length==0){
     $('#pylonB').parent().hide()
 }
 
+$('.spinner-grow').hide();
+
 
 
 //-------------------------------
@@ -37,4 +39,10 @@ $('#pylonA, #pylonB').on('keyup', function () {
         $('#pylonA').removeClass('is-invalid');
         $('#pylonB').removeClass('is-invalid');
     }
+});
+
+$('form').submit(function () {
+    $('.spinner-grow').show();
+    $('.spinner-grow').prev().prop('disabled', true);
+    $('.spinner-grow').prev().text('Chargement en cours ...');
 });
