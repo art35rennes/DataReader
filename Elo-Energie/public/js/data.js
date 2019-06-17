@@ -57,7 +57,7 @@ function makePlotly( x, y, graph ){
     var config = {
         locale: 'fr',
         scrollZoom: true,
-        displayModeBar: false,
+        displayModeBar: true,
         responsive: true,
     };
     var layout = {
@@ -76,6 +76,7 @@ function makePlotly( x, y, graph ){
 }
 
 function xTranslation($input) {
+    relayoutMouse = true;
     var xS = document.getElementById($input.parent().attr('id')+'Graph').layout.xaxis.range[0];
     var xE = document.getElementById($input.parent().attr('id')+'Graph').layout.xaxis.range[1];
     // console.log(
@@ -92,6 +93,7 @@ function xTranslation($input) {
 }
 
 function yTranslation($input) {
+    relayoutMouse = true;
     var yS = document.getElementById($input.parent().attr('id')+'Graph').layout.yaxis.range[0];
     var yE = document.getElementById($input.parent().attr('id')+'Graph').layout.yaxis.range[1];
     // console.log($input.val());
@@ -102,6 +104,7 @@ function yTranslation($input) {
 }
 
 function yZoom($input) {
+    relayoutMouse = true;
     var yS = document.getElementById($input.parent().attr('id')+'Graph').layout.yaxis.range[0];
     var yE = document.getElementById($input.parent().attr('id')+'Graph').layout.yaxis.range[1];
     // console.log($input.val());
@@ -118,7 +121,10 @@ function yZoom($input) {
 $('.container-fluid').removeClass('w-75');
 $('.container-fluid').addClass('row');
 
+var graphTimestamp = [];
+
 var mousedownID = -1;  //Global ID of mouse down interval
+var relayoutMouse = false;  //Global ID of mouse down interval
 
 makeplot();
 
@@ -128,19 +134,35 @@ makeplot();
 //            Event
 //-------------------------------
 
-$('#ldGraph, #lmaGraph').on('plotly_relayout', function(eventdata){
-    var xS =eventdata.target.layout.xaxis.range[0], xE =eventdata.target.layout.xaxis.range[1], yS =eventdata.target.layout.yaxis.range[0], yE =eventdata.target.layout.yaxis.range[1];
-        if($(this).attr('id')==='ldGraph'){
-            var update = {
-                'xaxis.range':[xS, xE],
-            };
-            Plotly.relayout('lmaGraph', update);
+$graph = $('#ldGraph, #lmaGraph');
+
+$graph.on('mouseover', function () {
+    console.log('clic');
+    relayoutMouse = true;
+});
+
+$graph.on('plotly_relayout', function(eventdata){
+    let xS =eventdata.target.layout.xaxis.range[0], xE =eventdata.target.layout.xaxis.range[1], yS =eventdata.target.layout.yaxis.range[0], yE =eventdata.target.layout.yaxis.range[1];
+
+    let update = {
+        'xaxis.range':[xS, xE],
+    };
+    if($(this).attr('id')==='ldGraph' && graphTimestamp.length < 2 && relayoutMouse){
+        relayoutMouse = false;
+        Plotly.relayout('lmaGraph', update);
+    }
+    else {
+        if($(this).attr('id')==='lmaGraph' && graphTimestamp.length < 2 && relayoutMouse){
+            relayoutMouse = false;
+            Plotly.relayout('ldGraph', update);
         }
-    });
+    }
+});
 
 
 $('input[type=range]').mousedown(function () {
     if(mousedownID==-1){
+
         if($(this).hasClass('X')){
             mousedownID = setInterval(xTranslation, 20,$(this));
         }
@@ -154,6 +176,7 @@ $('input[type=range]').mousedown(function () {
                 }
             }
         }
+
 
 
     }  //Prevent multimple loops!
