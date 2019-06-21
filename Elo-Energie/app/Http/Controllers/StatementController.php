@@ -42,8 +42,9 @@ class StatementController extends Controller
                 "newPylonB" => 'required',
                 "ligneB" => 'required|string|max:255',
                 "numeroB" => 'required|integer',
-                "longitudeB" => 'required',
-                "latitudeB" => 'required'
+                "longitudeB" => 'nullable',
+                "latitudeB" => 'nullable',
+                "calibration" => 'required'
             ])){
                 $pylon = new Pylon();
                 $pylon->ligne = $request->ligneA;
@@ -82,7 +83,8 @@ class StatementController extends Controller
                 $statement->nom = $request->nom;
                 $statement->pylon_A = $pylonA;
                 $statement->pylon_B = $pylonB;
-//                $statement->save();
+                $statement->calibrage = $request->calibration;
+                //                $statement->save();
             }
         }else{
             if (!$request->input('newPylonA', false)
@@ -96,8 +98,9 @@ class StatementController extends Controller
                     "newPylonB" => 'required',
                     "ligneB" => 'required|string|max:255',
                     "numeroB" => 'required|integer',
-                    "longitudeB" => 'required',
-                    "latitudeB" => 'required'
+                    "longitudeB" => 'nullable',
+                    "latitudeB" => 'nullable',
+                    "calibration" => 'required'
                 ])){
                     $PAL = explode(' - n°',$request->input('pylonA'));
                     $PAN = $PAL[1];
@@ -124,6 +127,7 @@ class StatementController extends Controller
                     $statement->nom = $request->nom;
                     $statement->pylon_A = Pylon::findIdOf($PAL, $PAN);
                     $statement->pylon_B = $pylonB;
+                    $statement->calibrage = $request->calibration;
 //                    $statement->save();
                 }
             }else{
@@ -166,6 +170,7 @@ class StatementController extends Controller
                         $statement->nom = $request->nom;
                         $statement->pylon_A = $pylonA;
                         $statement->pylon_B = Pylon::findIdOf($PBL, $PBN);
+                        $statement->calibrage = $request->calibration;
 //                        $statement->save();
                     }
                 }else{
@@ -190,6 +195,7 @@ class StatementController extends Controller
                             $statement->nom = $request->nom;
                             $statement->pylon_A = Pylon::findIdOf($PAL, $PAN);
                             $statement->pylon_B = Pylon::findIdOf($PBL, $PBN);
+                            $statement->calibrage = $request->calibration;
 //                            $statement->save();
                         }
                     }

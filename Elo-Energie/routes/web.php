@@ -26,5 +26,6 @@ Route::get('/statements/add', 'StatementController@addView');
 Route::post('/statements/add', 'StatementController@addDb');
 
 Route::get('/statements/data/{statement}', 'DataController@show');
+Route::get('/data/calibration/{statement}', 'DataController@getCalibration');
 Route::get('/data/csv/{statement}', 'DataController@getCsv');
 Route::get('/data/graphStats/{statement}/{data}', 'DataController@getGraphStats');

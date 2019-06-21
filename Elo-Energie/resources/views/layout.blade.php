@@ -20,7 +20,7 @@
 <body class="bg-light">
 <header>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="/">
             <img src="{{URL::asset('elo.png')}}" width="40" class="d-inline-block align-top" alt="">
             Elo-Energie</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -41,17 +41,17 @@
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="statementsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <i class="fas fa-file-alt fa-sm mr-1"></i>Etude de section
+                        <i class="fas fa-file-alt fa-sm mr-1"></i>Etude de portée
                     </a>
                     <div class="dropdown-menu" aria-labelledby="statementsDropdown">
-                        <a class="dropdown-item" href="/statements">Liste des études</a>
+                        <a class="dropdown-item" href="/statements">Liste des portées</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="/statements/add">Ajouter une étude</a>
+                        <a class="dropdown-item" href="/statements/add">Ajouter une portée</a>
                     </div>
                 </li>
-                <li class="nav-item">
+                <!--li class="nav-item">
                     <a class="nav-link" href="/admin"><i class="fas fa-search fa-sm mr-1"></i>Monitoring</a>
-                </li>
+                </li-->
             </ul>
         </div>
     </nav>

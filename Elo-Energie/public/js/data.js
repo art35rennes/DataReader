@@ -4,11 +4,22 @@
 
 function getGraphStat(element) {
 
+    $c = 0.0;
+    $.get("/data/calibration/"+$('#id').val(), function ($res) {$c = parseFloat($res);});
+
     $.get("/data/graphStats/"+$('#id').val()+"/"+element, function($data){       //$.get(URL,callback);
         $data = JSON.parse($data);
-        $('#'+element+"_min").html(($data[0].min).toFixed(2));
-        $('#'+element+"_max").html(($data[0].max).toFixed(2));
-        $('#'+element+"_avg_abs").html(($data[0].avg_abs).toFixed(2));
+        console.log(element);
+        if (element=="lmaGraph"){
+            $('#'+element+"_min").html((($data[0].min - $data[0].min)*$c).toFixed(2));
+            $('#'+element+"_max").html((($data[0].max - $data[0].min)*$c).toFixed(2));
+            $('#'+element+"_avg_abs").html((($data[0].avg_abs - $data[0].min)*$c).toFixed(2));
+        }
+        else {
+            $('#'+element+"_min").html(($data[0].min).toFixed(2));
+            $('#'+element+"_max").html(($data[0].max).toFixed(2));
+            $('#'+element+"_avg_abs").html(($data[0].avg_abs).toFixed(2));
+        }
     });
 }
 
@@ -136,11 +147,13 @@ makeplot();
 
 $graph = $('#ldGraph, #lmaGraph');
 
+$graph.scroll(function () {
+    console.log('scroll');
+});
 $graph.on('mouseover', function () {
     console.log('clic');
     relayoutMouse = true;
 });
-
 $graph.on('plotly_relayout', function(eventdata){
     let xS =eventdata.target.layout.xaxis.range[0], xE =eventdata.target.layout.xaxis.range[1], yS =eventdata.target.layout.yaxis.range[0], yE =eventdata.target.layout.yaxis.range[1];
 

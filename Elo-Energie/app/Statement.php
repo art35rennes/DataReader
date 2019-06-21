@@ -12,6 +12,7 @@ class Statement extends Model
         'nom',
         'pylon_A',
         'pylon_B',
+        'calibration',
     ];
 
     protected $connection = 'mysql';

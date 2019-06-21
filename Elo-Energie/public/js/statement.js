@@ -20,11 +20,18 @@ if($('#formNewPylonB').find('span.text-danger').length==0){
 
 $('.spinner-grow').hide();
 
+document.getElementById("nom").disabled = true;
+
 
 
 //-------------------------------
 //            Event
 //-------------------------------
+
+$('#data').change(function () {
+    $('#nom').val($("#data")[0].files[0].name);
+    document.getElementById("nom").disabled = false;
+});
 
 $('#newPylonA, #newPylonB').click(function () {
     $(this).parent().prev('div').toggle();

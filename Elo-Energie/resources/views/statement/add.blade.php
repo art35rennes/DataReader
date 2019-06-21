@@ -2,7 +2,7 @@
 
 
 @section('body')
-    <h4 class="mb-3 mt-1 font-weight-light">Ajout d'une étude de section</h4>
+    <h4 class="mb-3 mt-1 font-weight-light">Ajout d'une portée</h4>
 
     <form method="post" action="/statements/add" enctype="multipart/form-data" >
         @csrf
@@ -16,13 +16,22 @@
                     <span class="font-weight-light text-danger font-italic">{{$errors->first('nom')}}</span>
                 @endif
 
-                <div class="form-group col-6 pl-0">
-                    <label for="date">Date du relevé</label>
-                    <input type="date" class="form-control" id="date" name="date" value="{{old('date')}}">
+                <div class="row ml-1">
+                    <div class="form-group col-6 pl-0">
+                        <label for="date">Date du relevé</label>
+                        <input type="date" class="form-control" id="date" name="date" value="{{old('date')}}">
+                    </div>
+                    @if($errors->has('date'))
+                        <span class="font-weight-light text-danger font-italic">{{$errors->first('date')}}</span>
+                    @endif
+                    <div class="form-group col-6 pl-0">
+                        <label for="calibration">Calibration</label>
+                        <input type="number" step="0.01" class="form-control" id="calibration" name="calibration" value="{{old('calibration')}}">
+                    </div>
+                    @if($errors->has('date'))
+                        <span class="font-weight-light text-danger font-italic">{{$errors->first('date')}}</span>
+                    @endif
                 </div>
-                @if($errors->has('date'))
-                    <span class="font-weight-light text-danger font-italic">{{$errors->first('date')}}</span>
-                @endif
 
 
                 <div class="form-group">

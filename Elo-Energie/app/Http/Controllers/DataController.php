@@ -12,7 +12,17 @@ class DataController extends Controller
     }
 
     public function getCsv($statement, $filename='data.csv'){
-        error_log('Start CSV: '.date('H:i:s'));
+        $stats = json_decode($this->getGraphStats($statement, 'lma'));
+        $lmaMin = $stats[0]->min;
+
+        error_log('Start CSV: '.date('H:i:s1'));
+
+        $calibrage  = DB::table('statements')
+            ->select('calibrage')
+            ->where("id", "=", $statement)
+            ->distinct()
+            ->get();
+        $calibrage = $calibrage[0]->calibrage;
 
         $data = DB::table('data')
                     ->select('x', 'ld', 'lma')
@@ -25,7 +35,7 @@ class DataController extends Controller
         fputcsv($f, ["x","ld","lma"],",");
 
         foreach ($data as $key => $value)
-            fputcsv($f,[$value->x,$value->ld,$value->lma],",");
+            fputcsv($f,[$value->x,$value->ld,($value->lma - $lmaMin) * $calibrage],",");
 
         fseek($f, 0);
         error_log('Fin gen CSV: '.date('H:i:s'));
@@ -37,6 +47,15 @@ class DataController extends Controller
         fpassthru($f);
 
         error_log('FIN: '.date('H:i:s'));
+    }
+
+    public function getCalibration($statement){
+        $calibrage  = DB::table('statements')
+            ->select('calibrage')
+            ->where("id", "=", $statement)
+            ->distinct()
+            ->get();
+        return $calibrage[0]->calibrage;
     }
 
     public function getGraphStats($statement, $data){ //TODO fix query -> calc only on return value
@@ -59,8 +78,3 @@ class DataController extends Controller
         );
     }
 }
-
-//->select(
-//    " AVG(ABS($data)) as 'avg_abs'",
-//    " MAX($data)) as 'max'",
-//    " MIN($data)) as 'min'")

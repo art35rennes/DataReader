@@ -2,13 +2,13 @@
 
 
 @section('body')
-    <h4 class="mb-3 mt-1 font-weight-light">Liste des études de section</h4>
+    <h4 class="mb-3 mt-1 font-weight-light">Liste des portées</h4>
 
     <table class="table table-bordered table-striped table-responsive datatable">
         <thead>
         <tr>
             <th class="data-fit">Date</th>
-            <th>Nom&nbsp;du&nbsp;relevé</th>
+            <th>Portée</th>
             <th class="data-fit">Nombre de données</th>
             <th class="data-fit">Pylône</th>
             <th class="data-fit">Ligne</th>

@@ -2,7 +2,7 @@
 
 @section('body')
     <div class="col-12">
-        <h4 class="mb-3 mt-1 font-weight-light d-inline">Visualisation de données ?</h4>
+        <h4 class="mb-3 mt-1 font-weight-light d-inline">Visualisation de données</h4>
         <button type="button" class="btn btn-outline-dark m-1 btn-sm" data-toggle="modal" data-target="#faq">
             Comment ça marche
         </button>
@@ -12,10 +12,10 @@
     <div class="col-3" id="ld">
         <h4 class="d-inline">Local Default </h4><button class="btn btn-sm btn-outline-primary exportGraph">Exporter le graphique<i class="fas fa-file-export fa-sm m-1"></i></button>
         <h6 class="mt-1">Echelle verticale</h6>
-        <button class="btn btn-primary m-1 y-axis btn-sm" value="10000">10 000</button>
-        <button class="btn btn-primary m-1 y-axis btn-sm" value="6000">6 000</button>
-        <button class="btn btn-primary m-1 y-axis btn-sm" value="2000">2 000</button>
-        <button class="btn btn-primary m-1 y-axis btn-sm" value="500">500</button>
+        <button class="btn btn-primary m-1 y-axis btn-sm" value="400">400</button>
+        <button class="btn btn-primary m-1 y-axis btn-sm" value="200">200</button>
+        <button class="btn btn-primary m-1 y-axis btn-sm" value="100">100</button>
+        <button class="btn btn-primary m-1 y-axis btn-sm" value="50">50</button>
         <h6>Zoom vertical</h6>
         <input type="range" class="custom-range zY" min="-100" max="100" value="0" step="0.01">
         <hr>
@@ -42,10 +42,10 @@
     <div class="col-3" id="lma">
         <h4 class="d-inline">LMA </h4><button class="btn btn-sm btn-outline-primary exportGraph">Exporter le graphique<i class="fas fa-file-export fa-sm m-1"></i></button>
         <h6>Echelle verticale</h6>
-        <button class="btn btn-primary m-1 y-axis btn-sm" value="100">100</button>
-        <button class="btn btn-primary m-1 y-axis btn-sm" value="50">50</button>
-        <button class="btn btn-primary m-1 y-axis btn-sm" value="10">10</button>
-        <button class="btn btn-primary m-1 y-axis btn-sm" value="5">5</button>
+        <button class="btn btn-primary m-1 y-axis btn-sm" value="4">4</button>
+        <button class="btn btn-primary m-1 y-axis btn-sm" value="2">2</button>
+        <button class="btn btn-primary m-1 y-axis btn-sm" value="1">1</button>
+        <button class="btn btn-primary m-1 y-axis btn-sm" value="0.5">0.5</button>
         <h6>Zoom vertical</h6>
         <input type="range" class="custom-range zY" min="-10" max="10" value="0" step="0.01">
         <hr>
