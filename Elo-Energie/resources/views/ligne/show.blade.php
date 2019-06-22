@@ -7,20 +7,20 @@
     <table class="table table-bordered table-striped table-responsive datatable">
         <thead>
         <tr>
-            <th>Ligne</th>
+            <th class="fit">Ligne</th>
             <th>Pylônes référencé</th>
-            <th class="fit">Edition</th>
+            <!--th class="fit">Edition</th-->
         </tr>
         </thead>
         <tbody>
         @foreach($lignes as $ligne)
             <tr>
-                <td>{{$ligne->ligne}}</td>
+                <td class="fit">{{$ligne->ligne}}</td>
                 <td>{{$ligne->nb}}</td>
-                <td class="fit text-center">
+                <!--td class="fit text-center">
                     <i class="fas fa-edit mr-1"></i>
                     <i class="fas fa-ban"></i>
-                </td>
+                </td-->
             </tr>
         @endforeach
         </tbody>

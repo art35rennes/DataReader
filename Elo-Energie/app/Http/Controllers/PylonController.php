@@ -26,8 +26,8 @@ class PylonController extends Controller
         if ($request->validate([
             'ligne' => 'required|max:255|string',
             'numero' => 'required|integer',
-            'longitude' => 'required',
-            'latitude' => 'required'
+            'longitude' => 'nullable',
+            'latitude' => 'nullable'
         ])) {
             $pylon = new Pylon();
             $pylon->ligne = $request->ligne;

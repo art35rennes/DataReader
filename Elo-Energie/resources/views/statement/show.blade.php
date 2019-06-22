@@ -13,7 +13,7 @@
             <th class="data-fit">Pylône</th>
             <th class="data-fit">Ligne</th>
             <th class="fit">Consulter</th>
-            <th class="fit">Edition</th>
+            <!--th class="fit">Edition</th-->
         </tr>
         </thead>
         <tbody>
@@ -27,10 +27,10 @@
                 <td class="fit text-center">
                     <i class="fas fa-chart-area" onclick="window.open('/statements/data/{{$statement->id}}', '_parent')"></i>
                 </td>
-                <td class="fit text-center">
+                <!--td class="fit text-center">
                     <i class="fas fa-edit mr-1"></i>
                     <i class="fas fa-ban"></i>
-                </td>
+                </td-->
             </tr>
         @endforeach
         </tbody>

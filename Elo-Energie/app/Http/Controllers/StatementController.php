@@ -37,8 +37,8 @@ class StatementController extends Controller
                 "newPylonA" => 'required',
                 "ligneA" => 'required|string|max:255',
                 "numeroA" => 'required|integer',
-                "longitudeA" => 'required',
-                "latitudeA" => 'required',
+                "longitudeA" => 'nullable',
+                "latitudeA" => 'nullable',
                 "newPylonB" => 'required',
                 "ligneB" => 'required|string|max:255',
                 "numeroB" => 'required|integer',
@@ -142,8 +142,8 @@ class StatementController extends Controller
                         "newPylonA" => 'required',
                         "ligneA" => 'required|string|max:255',
                         "numeroA" => 'required|integer',
-                        "longitudeA" => 'required',
-                        "latitudeA" => 'required'
+                        "longitudeA" => 'nullable',
+                        "latitudeA" => 'nullable'
                     ])) {
                         $PBL = explode(' - n°', $request->input('pylonB'));
                         $PBN = $PBL[1];
