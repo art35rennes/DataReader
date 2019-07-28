@@ -44,7 +44,7 @@ class StatementController extends Controller
                 "numeroB" => 'required|integer',
                 "longitudeB" => 'nullable',
                 "latitudeB" => 'nullable',
-                "calibration" => 'required'
+                "calibration" => 'nullable'
             ])){
                 $pylon = new Pylon();
                 $pylon->ligne = $request->ligneA;
@@ -83,7 +83,7 @@ class StatementController extends Controller
                 $statement->nom = $request->nom;
                 $statement->pylon_A = $pylonA;
                 $statement->pylon_B = $pylonB;
-                $statement->calibrage = $request->calibration;
+                $statement->calibrage = is_float($request->calibration)?$request->calibration:-2.25;
                 //                $statement->save();
             }
         }else{
@@ -127,7 +127,7 @@ class StatementController extends Controller
                     $statement->nom = $request->nom;
                     $statement->pylon_A = Pylon::findIdOf($PAL, $PAN);
                     $statement->pylon_B = $pylonB;
-                    $statement->calibrage = $request->calibration;
+                    $statement->calibrage = is_float($request->calibration)?$request->calibration:-2.25;
 //                    $statement->save();
                 }
             }else{
@@ -170,7 +170,7 @@ class StatementController extends Controller
                         $statement->nom = $request->nom;
                         $statement->pylon_A = $pylonA;
                         $statement->pylon_B = Pylon::findIdOf($PBL, $PBN);
-                        $statement->calibrage = $request->calibration;
+                        $statement->calibrage = is_float($request->calibration)?$request->calibration:-2.25;
 //                        $statement->save();
                     }
                 }else{
@@ -195,7 +195,7 @@ class StatementController extends Controller
                             $statement->nom = $request->nom;
                             $statement->pylon_A = Pylon::findIdOf($PAL, $PAN);
                             $statement->pylon_B = Pylon::findIdOf($PBL, $PBN);
-                            $statement->calibrage = $request->calibration;
+                            $statement->calibrage = is_float($request->calibration)?$request->calibration:-2.25;
 //                            $statement->save();
                         }
                     }
@@ -209,6 +209,7 @@ class StatementController extends Controller
         }
         else{
             $n = 0;
+//            dd($statement);
             $statement->save();
             if ($request->hasFile('data') && $request->file('data')->isValid()){
                 $indexX = 1;
@@ -223,19 +224,20 @@ class StatementController extends Controller
                 while(! feof($fn))  {
                     $line = fgets($fn);
                     if (is_numeric($line[0])){
-                        $split = preg_split('/[,]/', $line);
+                        $split = preg_split('/[;]/', $line);
 //                        echo 'X: '.$split[$indexX].
 //                            ' / LD: '.$split[$indexLD].
 //                            ' / LMA: '.$split[$indexLMA].
 //                            ' / line: '.$line.'<br>';
+//                        dd($split);
 
                         if ($split[$indexX] != '' &&
                             $split[$indexLD] != '' &&
                             $split[$indexLMA] != '') {
                             array_push($dataToInsert, [
-                                'x' => $split[$indexX],
-                                'ld' => $split[$indexLD],
-                                'lma' => $split[$indexLMA],
+                                'x' => floatval(preg_replace('/[,]/','/[.]/',$split[$indexX])),
+                                'ld' => floatval(preg_replace('/[,]/','/[.]/',$split[$indexLD])),
+                                'lma' => floatval(preg_replace('/[,]/','/[.]/',$split[$indexLMA])),
                                 'statement' => $statement->id
                             ]);
                             $n++;

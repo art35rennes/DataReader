@@ -28,8 +28,8 @@
                         <label for="calibration">Calibration</label>
                         <input type="number" step="0.01" class="form-control" id="calibration" name="calibration" value="{{old('calibration')}}">
                     </div>
-                    @if($errors->has('date'))
-                        <span class="font-weight-light text-danger font-italic">{{$errors->first('date')}}</span>
+                    @if($errors->has('calibration'))
+                        <span class="font-weight-light text-danger font-italic">{{$errors->first('calibration')}}</span>
                     @endif
                 </div>
 
