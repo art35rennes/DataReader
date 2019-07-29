@@ -235,9 +235,9 @@ class StatementController extends Controller
                             $split[$indexLD] != '' &&
                             $split[$indexLMA] != '') {
                             array_push($dataToInsert, [
-                                'x' => floatval(preg_replace('/[,]/','/[.]/',$split[$indexX])),
-                                'ld' => floatval(preg_replace('/[,]/','/[.]/',$split[$indexLD])),
-                                'lma' => floatval(preg_replace('/[,]/','/[.]/',$split[$indexLMA])),
+                                'x' => (str_replace(',','.',$split[$indexX])),
+                                'ld' => (str_replace(',','.',$split[$indexLD])),
+                                'lma' => (str_replace(',','.',$split[$indexLMA])),
                                 'statement' => $statement->id
                             ]);
                             $n++;
