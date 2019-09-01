@@ -64,7 +64,7 @@ function loadData(evt) {
                 // console.log(data);
                 $row = $lines[i].split($("#delimiter").val());
                 if ($row[1] !== undefined){
-                    x = parseFloat($row[1].replace($float, '.'))*-1;
+                    x = parseFloat($row[1].replace($float, '.'))*-1.0;
                     ld.x.push(x);
                     ld.y.push(parseFloat($row[2].replace($float, '.')));
                     lma.x.push(x);
@@ -95,6 +95,74 @@ function min($tab){
     });
     return min;
 }
+
+$('#apply-ld-v-value').click(function () {
+    var update = {
+        'yaxis.range':[parseFloat($('#ld-v-value').val())*-1.0, parseFloat($('#ld-v-value').val())],
+    };
+
+    // console.log(update);
+    Plotly.relayout('graphBase', update);
+});
+$('#apply-ld-h-value').click(function () {
+    var update = {
+        'xaxis.range':[0, parseFloat($('#ld-h-value').val())],
+    };
+
+    // console.log(update);
+    Plotly.relayout('graphBase', update);
+});
+$('#apply-lma-v-value').click(function () {
+    var update = {
+        'yaxis2.range':[parseFloat($('#lma-v-value').val())*-1.0,0],
+    };
+
+    // console.log(update);
+    Plotly.relayout('graphBase', update);
+});
+$('#apply-lma-h-value').click(function () {
+    var update = {
+        'xaxis.range':[0, parseFloat($('#lma-h-value').val())],
+    };
+
+    // console.log(update);
+    Plotly.relayout('graphBase', update);
+});
+
+$('.btn-ld-h-value').click(function () {
+    var update = {
+        'xaxis.range':[0, parseFloat($(this).val())],
+    };
+
+    // console.log(update);
+    Plotly.relayout('graphBase', update);
+});
+$('.btn-ld-v-value').click(function () {
+    console.log();
+    var update = {
+        'yaxis.range':[parseFloat($(this).val())*-1.0, parseFloat($(this).val())],
+    };
+
+    // console.log(update);
+    Plotly.relayout('graphBase', update);
+});
+
+$('.btn-lma-h-value').click(function () {
+    var update = {
+        'xaxis.range':[0, parseFloat($(this).val())],
+    };
+
+    // console.log(update);
+    Plotly.relayout('graphBase', update);
+});
+$('.btn-lma-v-value').click(function () {
+    var update = {
+        'yaxis2.range':[parseFloat($(this).val())*-1.0,0],
+    };
+
+    // // console.log(update);
+    Plotly.relayout('graphBase', update);
+});
 
 $(document).ready(function(){
     document.getElementById('fileinput').addEventListener('change', loadData, false);

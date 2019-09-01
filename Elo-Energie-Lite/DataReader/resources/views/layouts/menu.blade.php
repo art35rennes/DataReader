@@ -102,15 +102,25 @@
 
                         <h6 class="collapse-header">Réglage:</h6>
                         <div class="collapse-item">
-                            <label for="calibration">Calibration: </label>
+                            <label for="calibration">Calibration LMA: </label>
                             <input type="number" step="0.01" class="form-control form-control-user" id="calibration" name="calibration" placeholder="Calibration" value="-2.25">
                         </div>
+
+{{--                        <div class="collapse-item">--}}
+{{--                            <label for="float">Commencer à: </label>--}}
+{{--                            <input type="number" step="0.001" min="0" class="form-control form-control-user" id="start" name="start" placeholder="mm">--}}
+{{--                        </div>--}}
+
+{{--                        <div class="collapse-item">--}}
+{{--                            <label for="float">Finir à: </label>--}}
+{{--                            <input type="number" step="0.001" min="0" class="form-control form-control-user" id="end" name="end" placeholder="mm">--}}
+{{--                        </div>--}}
 
                         <div class="collapse-item">
                             <label for="calibration">Observer: </label>
                             <div class="custom-control custom-switch">
                                 <input type="checkbox" class="custom-control-input" id="transit">
-                                <label class="custom-control-label" for="transit">Aller</label>
+                                <label class="custom-control-label" for="transit">Aller <span class="small">(retour par défault)</span></label>
                             </div>
                         </div>
 
@@ -123,6 +133,89 @@
                     </div>
                 </div>
             </li>
+            <!-- Divider -->
+            <hr class="sidebar-divider">
+            <!-- Echelle -->
+            <div class="sidebar-heading">
+                Echelle
+            </div>
+            <!-- LD - Pages Collapse Menu -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+                    <i class="fas fa-binoculars"></i>
+                    <span>LD</span>
+                </a>
+                <div id="collapseFour" class="collapse" aria-labelledby="collapseFour" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded border-left-danger">
+                        <h6 class="collapse-header">LD:</h6>
+                        <div class="collapse-item">
+                            <label for="delimiter">Vertical: </label>
+                            <input type="number" step="0.01" class="form-control form-control-sm form-control-user" id="ld-v-value" name="ld-v-value" placeholder="..." >
+                            <button class="btn-user btn-outline-success btn btn-sm m-1" id="apply-ld-v-value"><i class="fa fa-check mr-1"></i>Appliquer</button>
+                        </div>
+
+                        <div class="collapse-item">
+                            <button class="btn-user btn-outline-primary btn btn-sm m-1 btn-ld-v-value" value="50"><i class="fa fa-arrows-alt-v mr-1"></i>&nbsp;&nbsp;50</button>
+                            <button class="btn-user btn-outline-primary btn btn-sm m-1 btn-ld-v-value" value="100"><i class="fa fa-arrows-alt-v mr-1"></i>100</button><br>
+                            <button class="btn-user btn-outline-primary btn btn-sm m-1 btn-ld-v-value" value="250"><i class="fa fa-arrows-alt-v mr-1"></i>250</button>
+                            <button class="btn-user btn-outline-primary btn btn-sm m-1 btn-ld-v-value" value="500"><i class="fa fa-arrows-alt-v mr-1"></i>500</button>
+                        </div>
+
+                        <div class="collapse-item">
+                            <label for="delimiter">Horizontale: </label>
+                            <input type="number" step="0.01" class="form-control form-control-sm form-control-user" id="ld-h-value" name="ld-h-value" placeholder="..." >
+                            <button class="btn-user btn-outline-success btn btn-sm m-1" id="apply-ld-h-value"><i class="fa fa-check mr-1"></i>Appliquer</button>
+                        </div>
+
+                        <div class="collapse-item">
+                            <button class="btn-user btn-outline-dark btn btn-sm m-1 btn-ld-h-value" value="50"><i class="fa fa-arrows-alt-h mr-1"></i>&nbsp;&nbsp;50</button>
+                            <button class="btn-user btn-outline-dark btn btn-sm m-1 btn-ld-h-value" value="100"><i class="fa fa-arrows-alt-h mr-1"></i>100</button><br>
+                            <button class="btn-user btn-outline-dark btn btn-sm m-1 btn-ld-h-value" value="250"><i class="fa fa-arrows-alt-h mr-1"></i>250</button>
+                            <button class="btn-user btn-outline-dark btn btn-sm m-1 btn-ld-h-value" value="500"><i class="fa fa-arrows-alt-h mr-1"></i>500</button>
+                        </div>
+
+                    </div>
+                </div>
+            </li>
+            <!-- LMA - Pages Collapse Menu -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
+                    <i class="fas fa-binoculars"></i>
+                    <span>LMA</span>
+                </a>
+                <div id="collapseFive" class="collapse" aria-labelledby="collapseFive" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded border-left-danger">
+                        <h6 class="collapse-header">LMA:</h6>
+                        <div class="collapse-item">
+                            <label for="delimiter">Vertical: </label>
+                            <input type="number" step="0.01" class="form-control form-control-sm form-control-user" id="lma-v-value" name="lma-v-value" placeholder="..." >
+                            <button class="btn-user btn-outline-success btn btn-sm m-1" id="apply-lma-v-value"><i class="fa fa-check mr-1"></i>Appliquer</button>
+                        </div>
+
+                        <div class="collapse-item">
+                            <button class="btn-user btn-outline-primary btn btn-sm m-1 btn-lma-v-value" value="1"><i class="fa fa-arrows-alt-v mr-1"></i>&nbsp;1</button>
+                            <button class="btn-user btn-outline-primary btn btn-sm m-1 btn-lma-v-value" value="2"><i class="fa fa-arrows-alt-v mr-1"></i>&nbsp;2</button><br>
+                            <button class="btn-user btn-outline-primary btn btn-sm m-1 btn-lma-v-value" value="5"><i class="fa fa-arrows-alt-v mr-1"></i>&nbsp;5</button>
+                            <button class="btn-user btn-outline-primary btn btn-sm m-1 btn-lma-v-value" value="10"><i class="fa fa-arrows-alt-v mr-1"></i>10</button>
+                        </div>
+
+                        <div class="collapse-item">
+                            <label for="delimiter">Horizontale: </label>
+                            <input type="number" step="0.01" class="form-control form-control-sm form-control-user" id="lma-h-value" name="lma-h-value" placeholder="..." >
+                            <button class="btn-user btn-outline-success btn btn-sm m-1" id="apply-lma-h-value"><i class="fa fa-check mr-1"></i>Appliquer</button>
+                        </div>
+
+                        <div class="collapse-item">
+                            <button class="btn-user btn-outline-dark btn btn-sm m-1 btn-lma-h-value" value="50"><i class="fa fa-arrows-alt-h mr-1"></i>&nbsp;&nbsp;50</button>
+                            <button class="btn-user btn-outline-dark btn btn-sm m-1 btn-lma-h-value" value="100"><i class="fa fa-arrows-alt-h mr-1"></i>100</button><br>
+                            <button class="btn-user btn-outline-dark btn btn-sm m-1 btn-lma-h-value" value="250"><i class="fa fa-arrows-alt-h mr-1"></i>250</button>
+                            <button class="btn-user btn-outline-dark btn btn-sm m-1 btn-lma-h-value" value="500"><i class="fa fa-arrows-alt-h mr-1"></i>500</button>
+                        </div>
+
+                    </div>
+                </div>
+            </li>
+
             <!-- Divider -->
             <hr class="sidebar-divider">
 

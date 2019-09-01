@@ -6,16 +6,24 @@
 
         <div id="graphBase" class="graph"></div>
 
-        <div class="card mb-4 col-lg-7 col-md-8 col-sm-12">
+        <div class="card mb-4 col-lg-7 col-md-8 col-sm-12 mt-3">
             <div class="card-header">
                 Que faire ?
             </div>
             <div class="card-body">
-                <p>Via le menu, onglet <kbd>CSV</kbd>, importer votre fichier et définissez le format de votre fichier.
-                Les graphiques seront automatiquement généré une fois le fichier chargé.</p>
-                <p>Vous pouvez personnaliser les paramètres de visualisation dans l'onglet <kbd>Paramètres</kbd> du menu. Les paramètres doivent être choisi avant l'importation du fichier.
+                <p>Via le menu, onglet <kbd>CSV</kbd>, importez votre fichier et définissez le format de celui-ci.
+                Les graphiques seront automatiquement générés une fois le fichier chargé.</p>
+                <p>Vous pouvez personnaliser les paramètres de visualisation dans l'onglet <kbd>Paramètres</kbd> du menu. Les paramètres doivent être choisis avant l'importation du fichier.
                 Pour les modifier une fois un graphique chargé, utiliser la fonction <kbd>Reset</kbd>.</p>
                 <p>Vous pouvez réinitialiser la page pour visualiser un nouveau jeu de données ou modifier les paramètres de visualisation via le bouton <kbd>Reset</kbd> du menu.</p>
+            </div>
+        </div>
+        <div class="card mb-4 col-lg-7 col-md-8 col-sm-12 mt-3">
+            <div class="card-header">
+                Work in progress
+            </div>
+            <div class="card-body">
+                <p>Il n'est pas encore possible d'exporter les graphiques <kbd>LD</kbd> et <kbd>LMA</kbd> séparement.</p>
             </div>
         </div>
     </div>
