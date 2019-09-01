@@ -164,6 +164,13 @@ $('.btn-lma-v-value').click(function () {
     Plotly.relayout('graphBase', update);
 });
 
+$('#ld-export').click(function () {
+    Plotly.downloadImage("graphBase", {format: 'png', width: 1200, height: 600, filename: 'DataReader - LD and LMA'});
+});
+$('#lma-export').click(function () {
+    Plotly.downloadImage("graphBase", {format: 'png', width: 1200, height: 600, filename: 'DataReader - LD and LMA'});
+});
+
 $(document).ready(function(){
     document.getElementById('fileinput').addEventListener('change', loadData, false);
 });

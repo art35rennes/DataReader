@@ -227,13 +227,13 @@
             </div>
 
             <li class="nav-item">
-                <a class="nav-link" href="/">
+                <a class="nav-link" id="ld-export">
                     <i class="fa fa-file-export"></i>
                     <span>LD</span></a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="/">
+                <a class="nav-link" id="lma-export">
                     <i class="fas fa-file-export"></i>
                     <span>LMA</span></a>
             </li>
