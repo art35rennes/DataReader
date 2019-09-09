@@ -65,7 +65,7 @@
                         <h6 class="collapse-header">Paramètres:</h6>
                         <div class="collapse-item">
                             <label for="delimiter">Délimiteur: </label>
-                            <input type="text" size="1" class="form-control form-control-user w-50" id="delimiter" name="delimiter" placeholder="Délimiteur" value=";">
+                            <input type="text" size="1" class="form-control form-control-user w-50" id="delimiter" name="delimiter" placeholder="Délimiteur" value=",">
                         </div>
 
                         <div class="collapse-item">
@@ -116,13 +116,13 @@
 {{--                            <input type="number" step="0.001" min="0" class="form-control form-control-user" id="end" name="end" placeholder="mm">--}}
 {{--                        </div>--}}
 
-                        <div class="collapse-item">
-                            <label for="calibration">Observer: </label>
-                            <div class="custom-control custom-switch">
-                                <input type="checkbox" class="custom-control-input" id="transit">
-                                <label class="custom-control-label" for="transit">Aller <span class="small">(retour par défault)</span></label>
-                            </div>
-                        </div>
+{{--                        <div class="collapse-item">--}}
+{{--                            <label for="calibration">Observer: </label>--}}
+{{--                            <div class="custom-control custom-switch">--}}
+{{--                                <input type="checkbox" class="custom-control-input" id="transit">--}}
+{{--                                <label class="custom-control-label" for="transit">Aller <span class="small">(retour par défault)</span></label>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
 
 
 {{--                        <h6 class="collapse-header">Custom Utilities:</h6>--}}
@@ -155,10 +155,10 @@
                         </div>
 
                         <div class="collapse-item">
-                            <button class="btn-user btn-outline-primary btn btn-sm m-1 btn-ld-v-value" value="50"><i class="fa fa-arrows-alt-v mr-1"></i>&nbsp;&nbsp;50</button>
-                            <button class="btn-user btn-outline-primary btn btn-sm m-1 btn-ld-v-value" value="100"><i class="fa fa-arrows-alt-v mr-1"></i>100</button><br>
-                            <button class="btn-user btn-outline-primary btn btn-sm m-1 btn-ld-v-value" value="250"><i class="fa fa-arrows-alt-v mr-1"></i>250</button>
-                            <button class="btn-user btn-outline-primary btn btn-sm m-1 btn-ld-v-value" value="500"><i class="fa fa-arrows-alt-v mr-1"></i>500</button>
+                            <button class="btn-user btn-outline-primary btn btn-sm m-1 btn-ld-v-value" value="20"><i class="fa fa-arrows-alt-v mr-1"></i>&nbsp;&nbsp;20</button>
+                            <button class="btn-user btn-outline-primary btn btn-sm m-1 btn-ld-v-value" value="60"><i class="fa fa-arrows-alt-v mr-1"></i>&nbsp;&nbsp;60</button><br>
+                            <button class="btn-user btn-outline-primary btn btn-sm m-1 btn-ld-v-value" value="200"><i class="fa fa-arrows-alt-v mr-1"></i>200</button>
+                            <button class="btn-user btn-outline-primary btn btn-sm m-1 btn-ld-v-value" value="400"><i class="fa fa-arrows-alt-v mr-1"></i>400</button>
                         </div>
 
                         <div class="collapse-item">
@@ -226,16 +226,22 @@
                 Exportation des graphiques
             </div>
 
-            <li class="nav-item">
-                <a class="nav-link" id="ld-export">
-                    <i class="fa fa-file-export"></i>
-                    <span>LD</span></a>
-            </li>
+{{--            <li class="nav-item">--}}
+{{--                <a class="nav-link" id="ld-export">--}}
+{{--                <i class="fa fa-file-export"></i>--}}
+{{--                <span>LD</span></a>--}}
+{{--            </li>--}}
+
+{{--            <li class="nav-item">--}}
+{{--                <a class="nav-link" id="lma-export">--}}
+{{--                <i class="fas fa-file-export"></i>--}}
+{{--                <span>LMA</span></a>--}}
+{{--            </li>--}}
 
             <li class="nav-item">
                 <a class="nav-link" id="lma-export">
-                    <i class="fas fa-file-export"></i>
-                    <span>LMA</span></a>
+                <i class="fas fa-file-export"></i>
+                <span>Graphique combiné</span></a>
             </li>
 
 
@@ -505,6 +511,7 @@
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
+                        <span class="mr-1">En utilisant ce site et ces services vous consentez aux <a href="/cgu">CGU</a> |</span>
                         <span>Copyright &copy; Arthur Sicard 2019</span>
                     </div>
                 </div>

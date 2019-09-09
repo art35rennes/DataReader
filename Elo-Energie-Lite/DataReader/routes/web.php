@@ -14,3 +14,7 @@
 Route::get('/', function () {
     return view('home');
 });
+
+Route::get('/cgu', function () {
+    return view('cgu');
+});

@@ -27,6 +27,7 @@ var data = [ld, lma];
 
 var layout = {
     autosize: true,
+    height: 600,
     margin: {
         l: 50,
         r: 0,
@@ -46,6 +47,8 @@ var layout = {
 function loadData(evt) {
     //Retrieve the first (and only!) File from the FileList object
     var f = evt.target.files[0];
+    $('#fileName').html(f.name);
+    // console.log(f);
 
     if (f) {
         var r = new FileReader();
@@ -55,8 +58,11 @@ function loadData(evt) {
 
             $float = $("#float").val();
             $calibration = parseFloat($("#calibration").val());
-            $limit = $("#transit").prop("checked")?$lines.length:Math.round($lines.length/2);
-            $start = $("#transit").prop("checked")?Math.round($lines.length/2):0;
+            // $limit = $("#transit").prop("checked")?$lines.length:Math.round($lines.length/2);
+            // $start = $("#transit").prop("checked")?Math.round($lines.length/2):0;
+
+            $limit = $lines.length;
+            $start = 0;
             var x;
 
             // console.log($a);
@@ -64,7 +70,7 @@ function loadData(evt) {
                 // console.log(data);
                 $row = $lines[i].split($("#delimiter").val());
                 if ($row[1] !== undefined){
-                    x = parseFloat($row[1].replace($float, '.'))*-1.0;
+                    x = parseFloat($row[1].replace($float, '.'));
                     ld.x.push(x);
                     ld.y.push(parseFloat($row[2].replace($float, '.')));
                     lma.x.push(x);
@@ -165,10 +171,10 @@ $('.btn-lma-v-value').click(function () {
 });
 
 $('#ld-export').click(function () {
-    Plotly.downloadImage("graphBase", {format: 'png', width: 1200, height: 600, filename: 'DataReader - LD and LMA'});
+    Plotly.downloadImage("graphBase", {format: 'png', width: 1200, height: 600, filename: 'DataReader - '+$('#fileName').html()});
 });
 $('#lma-export').click(function () {
-    Plotly.downloadImage("graphBase", {format: 'png', width: 1200, height: 600, filename: 'DataReader - LD and LMA'});
+    Plotly.downloadImage("graphBase", {format: 'png', width: 1200, height: 600, filename: 'DataReader - '+$('#fileName').html()});
 });
 
 $(document).ready(function(){
