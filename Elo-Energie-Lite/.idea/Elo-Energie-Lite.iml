@@ -12,6 +12,7 @@
       <excludeFolder url="file://$MODULE_DIR$/DataReader/vendor/doctrine/lexer" />
       <excludeFolder url="file://$MODULE_DIR$/DataReader/vendor/dragonmantank/cron-expression" />
       <excludeFolder url="file://$MODULE_DIR$/DataReader/vendor/egulias/email-validator" />
+      <excludeFolder url="file://$MODULE_DIR$/DataReader/vendor/elic-dev/laravel-site-protection" />
       <excludeFolder url="file://$MODULE_DIR$/DataReader/vendor/erusev/parsedown" />
       <excludeFolder url="file://$MODULE_DIR$/DataReader/vendor/fideloper/proxy" />
       <excludeFolder url="file://$MODULE_DIR$/DataReader/vendor/filp/whoops" />

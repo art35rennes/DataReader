@@ -30,9 +30,9 @@
 
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/">
-                <div class="sidebar-brand-icon rotate-n-15">
-                    <i class="fas fa-database"></i>
-                </div>
+{{--                <div class="sidebar-brand-icon rotate-n-15">--}}
+{{--                    <i class="fas fa-database"></i>--}}
+{{--                </div>--}}
                 <div class="sidebar-brand-text mx-3">DataReader</div>
             </a>
 
@@ -508,14 +508,14 @@
             <!-- End of Main Content -->
 
             <!-- Footer -->
-            <footer class="sticky-footer bg-white">
-                <div class="container my-auto">
-                    <div class="copyright text-center my-auto">
-                        <span class="mr-1">En utilisant ce site et ces services vous consentez aux <a href="/cgu">CGU</a> |</span>
-                        <span>Copyright &copy; Arthur Sicard 2019</span>
-                    </div>
-                </div>
-            </footer>
+{{--            <footer class="sticky-footer bg-white">--}}
+{{--                <div class="container my-auto">--}}
+{{--                    <div class="copyright text-center my-auto">--}}
+{{--                        <span class="mr-1">En utilisant ce site et ces services vous consentez aux <a href="/cgu">CGU</a> |</span>--}}
+{{--                        <span>Copyright &copy; Arthur Sicard 2019</span>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--            </footer>--}}
             <!-- End of Footer -->
 
         </div>

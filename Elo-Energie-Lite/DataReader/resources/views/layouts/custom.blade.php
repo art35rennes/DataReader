@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Earthquake</title>
+    <title>Elo-Energie - DataReader</title>
 
     <!-- Custom fonts for this template-->
     <link href="{{URL::asset("fontawesome-free/css/all.min.css")}}" rel="stylesheet" type="text/css">
